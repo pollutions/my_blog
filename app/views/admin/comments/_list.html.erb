@@ -1,0 +1,16 @@
+<tr id="comment_<%= comments.id %>">
+  <td class="center aligned">
+    <span><%= comments.content%></span>
+  </td>
+  <td class="center aligned">
+    <%=  comments.blog_id%>
+  </td>
+  <td class="center aligned">
+    <%= comments.created_at %>
+  </td>
+  <td class="center aligned">
+    <%= link_to edit_admin_comment_path(comments.id) , remote: true, class: 'ui icon primary button', 'data-content' => '修改分类', 'data-variation' => 'inverted'  do%>
+      <i class="edit icon"></i>
+    <% end %>
+  </td>
+</tr>
