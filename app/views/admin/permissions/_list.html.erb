@@ -15,7 +15,7 @@
     <%#= link_to_with_permissions edit_admin_permission_path(permission), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
       <i class="edit icon"></i>
     <%# end %>
-    <%= link_to add_roles_admin_permission_path(permission), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+    <%= link_to add_roles_admin_permissions_path(id:permission.id),remote: true, data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
       <i class="hand pointer icon"></i>
     <% end %>
     <%#= link_to_with_permissions edit_parent_admin_hr_permission_path(permission), remote: true, data: {content: '分配上级', variation: 'inverted'}, class: 'ui olive icon button' do %>

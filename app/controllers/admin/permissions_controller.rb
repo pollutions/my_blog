@@ -4,7 +4,8 @@ class Admin::PermissionsController < Admin::BaseController
   # GET /permissions
   # GET /permissions.json
   def index
-    
+    @q = SearchParams.new(params[:search_params] || {})
+    @permissions = Permission.default_where(@q.attributes(self)).page(params[:page]).per(10)
   end
 
   # GET /permissions/1
@@ -20,11 +21,11 @@ class Admin::PermissionsController < Admin::BaseController
     @permission = permission.new
   end
   def add_roles
-    @permission = permission.find(params[:id])
+    @permission = Permission.find(params[:id])
   end
 
   def save_roles
-    @permission = permission.find(params[:id])
+    @permission = Permission.find(params[:id])
     @permission.role_ids = params[:permission][:role_ids]
   end
   
