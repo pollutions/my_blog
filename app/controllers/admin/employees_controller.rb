@@ -21,7 +21,14 @@ class Admin::EmployeesController < Admin::BaseController
     @employee =  Employee.find(params[:id])
     render :layout => false
   end
+  def add_roles
+    @employee = Employee.find(params[:id])
+  end
 
+  def save_roles
+    @employee = Employee.find(params[:id])
+    @employee.role_ids = params[:employee][:role_ids]
+  end
   def show
     @html_title =  "Show employee"
     @employee =  Employee.find(params[:id])

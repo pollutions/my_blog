@@ -11,13 +11,17 @@
           <i class="left bullseye icon"></i>
           <span>员工管理</span>
         <% end %>
+		<%= link_to admin_permissions_path, class: 'item', active_class: 'actives' do %>
+          <i class="left bullseye icon"></i>
+          <span>权限管理</span>
+        <% end %>
 	<%= link_to admin_categories_path, class: 'item', active_class: 'actives' do %>
           <i class="left bullseye icon"></i>
-          <span>Categories</span>
+          <span>分类管理</span>
         <% end %>
         <%= link_to admin_comments_path, class: 'item', active_class: 'actives' do %>
           <i class="left bullseye icon"></i>
-          <span>Comments</span>
+          <span>评论管理</span>
         <% end %>
         <%= link_to admin_blogs_path, class: 'item', active_class: 'actives' do %>
           <i class="left bullseye icon"></i>

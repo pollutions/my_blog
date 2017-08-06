@@ -17,12 +17,21 @@ Rails.application.routes.draw do
         get :show_name
       end  
     end
+    resources :permissions do
+	collection do
+        get :show_name
+	get  :add_roles
+        post :save_roles
+      end  
+    end
     resources :employees do
       collection do
         get  :forget_password
         post :forget_password
         get  :reset_mail
-        get  :error_mail    
+        get  :error_mail
+	get  :add_roles
+        post :save_roles
       end
     end
     resources :blogs do

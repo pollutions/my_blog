@@ -24263,3 +24263,2363 @@ Processing by Admin::CommentsController#edit as JS
 Completed 200 OK in 44ms (Views: 15.9ms | ActiveRecord: 0.6ms)
 
 
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/" for 192.168.1.2 at 2017-08-05 20:28:42 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (173.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (24.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (172.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (16.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (1.8ms)
+  Rendered blogs/index.html.erb within layouts/blog (369.1ms)
+  Rendered shared/blog/_top.html.erb (3.1ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 870ms (Views: 624.1ms | ActiveRecord: 207.8ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/i/app-icon72x72@2x.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-05 20:31:10 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (37.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (7.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (86.9ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 8, `updated_at` = '2017-08-05 12:31:10' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (66.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mBlog Load (18.8ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (21.2ms)
+  Rendered blogs/show.html.erb within layouts/blog (23.3ms)
+  Rendered shared/blog/_top.html.erb (0.8ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 324ms (Views: 45.6ms | ActiveRecord: 217.5ms)
+
+
+Started GET "/blogs/assets/i/app-icon72x72@2x.png" for 192.168.1.2 at 2017-08-05 20:31:10 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/assets/i/app-icon72x72@2x.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin" for 192.168.1.2 at 2017-08-05 20:53:14 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/login" for 192.168.1.2 at 2017-08-05 20:53:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  [1m[36mEmployee Load (3.1ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (27.0ms)[0m  [1m[33mUPDATE `employees` SET `current_sign_in_at` = '2017-08-05 12:53:24', `last_sign_in_at` = '2017-08-03 03:26:25', `sign_in_count` = 10, `updated_at` = '2017-08-05 12:53:24' WHERE `employees`.`id` = 1[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.4:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 321ms (ActiveRecord: 160.2ms)
+
+
+Started GET "/" for 192.168.1.2 at 2017-08-05 20:53:24 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (7.9ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (2.0ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (6.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (88.0ms)
+  Rendered shared/blog/_top.html.erb (0.8ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 332ms (Views: 281.1ms | ActiveRecord: 10.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/i/favicon.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+  [1m[35m (130.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (26.6ms)[0m  [1m[34mSELECT GET_LOCK(347727547856654595, 0)[0m
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateRoles (20170805132404)
+  [1m[35m (466.9ms)[0m  [1m[35mCREATE TABLE `roles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `parent_id` int, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (42.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170805132404')[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePermissions (20170805132734)
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE `permissions` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `name` varchar(255), `action_tag` varchar(255), `controller_tag` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (33.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170805132734')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePermissionsRoles (20170805132838)
+  [1m[35m (356.8ms)[0m  [1m[35mCREATE TABLE `permissions_roles` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `permission_id` bigint, `role_id` bigint,  INDEX `index_permissions_roles_on_permission_id`  (`permission_id`),  INDEX `index_permissions_roles_on_role_id`  (`role_id`)) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170805132838')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateEmployeesRoles (20170805133023)
+  [1m[35m (153.3ms)[0m  [1m[35mCREATE TABLE `employees_roles` (`role_id` bigint, `employee_id` bigint,  INDEX `index_employees_roles_on_role_id`  (`role_id`),  INDEX `index_employees_roles_on_employee_id`  (`employee_id`)) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.3ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170805133023')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (52.1ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK(347727547856654595)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (40.6ms)[0m  [1m[35mSHOW CREATE TABLE `attachments`[0m
+  [1m[35m (11.6ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'attachments'[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW CREATE TABLE `blogs`[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'blogs'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `categories`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'categories'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `comments`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'comments'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `employees`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'employees'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `employees_roles`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `permissions`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'permissions'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `permissions_roles`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `roles`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'roles'[0m
+  [1m[35m (67.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (39.4ms)[0m  [1m[32mINSERT INTO `roles` (`name`, `created_at`, `updated_at`) VALUES ('admin', '2017-08-05 14:12:41', '2017-08-05 14:12:41')[0m
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `roles` (`name`, `created_at`, `updated_at`) VALUES ('xiaoshou', '2017-08-05 14:12:41', '2017-08-05 14:12:41')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO `roles` (`name`, `created_at`, `updated_at`) VALUES ('kefu', '2017-08-05 14:12:41', '2017-08-05 14:12:41')[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-05 22:14:31 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (3.7ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (330.6ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [1 times] (0.7ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (336.5ms)
+  Rendered shared/admin/_top_bar.html.erb (18.6ms)
+  Rendered shared/admin/_sidebar.html.erb (19.8ms)
+Completed 200 OK in 1303ms (Views: 1198.7ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-05 22:14:47 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (16.7ms)
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (3.6ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (67.2ms)
+  Rendered shared/admin/_top_bar.html.erb (1.7ms)
+  Rendered shared/admin/_sidebar.html.erb (0.9ms)
+Completed 200 OK in 212ms (Views: 120.7ms | ActiveRecord: 1.4ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `permissions` (`name`, `action_tag`, `controller_tag`, `created_at`, `updated_at`) VALUES ('emplyee management ', 'index', 'employees', '2017-08-05 14:52:36', '2017-08-05 14:52:36')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.1ms)[0m  [1m[32mINSERT INTO `permissions` (`name`, `action_tag`, `controller_tag`, `created_at`, `updated_at`) VALUES ('text management ', 'index', 'blogs', '2017-08-05 14:52:36', '2017-08-05 14:52:36')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `permissions` (`name`, `action_tag`, `controller_tag`, `created_at`, `updated_at`) VALUES ('type management ', 'index', 'categories', '2017-08-05 14:52:36', '2017-08-05 14:52:36')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (24.1ms)[0m  [1m[34mSELECT  1 AS one FROM `employees` WHERE `employees`.`email` = BINARY '371671349@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `employees` (`name`, `created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('aw', '2017-08-05 14:54:34', '2017-08-05 14:54:34', '371671349@qq.com', '$2a$10$4WwvV1XEKHMToOxP9mfaeOF4262EE0.ljsRZM2Ixb3xl/riujyM6q')[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEmployee Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `employees` WHERE `employees`.`email` = BINARY '945642317@qq.com' LIMIT 1[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `employees` (`name`, `created_at`, `updated_at`, `email`, `encrypted_password`) VALUES ('pang8', '2017-08-05 14:54:34', '2017-08-05 14:54:34', '945642317@qq.com', '$2a$10$aBadDim7drdQIcs7KL4M3OzgiY2lhccMDRslpiQlxMEIZ8NT8EMIW')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 1[0m
+  [1m[36mRole Load (22.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (1, 1)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (56.8ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.4ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (2, 1)[0m
+  [1m[35m (19.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (52.9ms)[0m  [1m[31mDELETE FROM `employees_roles` WHERE `employees_roles`.`employee_id` = 1 AND `employees_roles`.`role_id` = 1[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (50.2ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (1, 1)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` INNER JOIN `employees_roles` ON `employees`.`id` = `employees_roles`.`employee_id` WHERE `employees_roles`.`role_id` = 1 LIMIT 11[0m
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  [1m[36mBlog Load (1.7ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE (category_id is not null) LIMIT 11[0m
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 25 LIMIT 1[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[35m (56.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 1 LIMIT 1[0m
+  [1m[36mBlog Load (4.8ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`category_id` = 1 LIMIT 11[0m
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1 LIMIT 11[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` INNER JOIN `employees_roles` ON `employees`.`id` = `employees_roles`.`employee_id` WHERE `employees_roles`.`role_id` = 1 LIMIT 11[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` WHERE `permissions`.`id` IN (1, 2, 3)[0m
+  [1m[36mPermission Load (0.8ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 1[0m
+  [1m[35m (16.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (12.9ms)[0m  [1m[32mINSERT INTO `permissions_roles` (`permission_id`, `role_id`) VALUES (1, 1)[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO `permissions_roles` (`permission_id`, `role_id`) VALUES (2, 1)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `permissions_roles` (`permission_id`, `role_id`) VALUES (3, 1)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` WHERE `permissions`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (40.4ms)[0m  [1m[31mDELETE FROM `permissions_roles` WHERE `permissions_roles`.`role_id` = 1 AND `permissions_roles`.`permission_id` = 3[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 2[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[36mPermission Load (0.8ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` WHERE `permissions`.`id` IN (2, 3)[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (42.7ms)[0m  [1m[32mINSERT INTO `permissions_roles` (`permission_id`, `role_id`) VALUES (2, 2)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `permissions_roles` (`permission_id`, `role_id`) VALUES (3, 2)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (2, 3)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.6ms)[0m  [1m[31mDELETE FROM `employees_roles` WHERE `employees_roles`.`employee_id` = 1 AND `employees_roles`.`role_id` = 1[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (3, 1)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 2[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 3[0m
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` INNER JOIN `employees_roles` ON `employees`.`id` = `employees_roles`.`employee_id` WHERE `employees_roles`.`role_id` = 1 LIMIT 11[0m
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` INNER JOIN `employees_roles` ON `employees`.`id` = `employees_roles`.`employee_id` WHERE `employees_roles`.`role_id` = 2 LIMIT 11[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` ORDER BY `roles`.`id` ASC LIMIT 1[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 1 LIMIT 11[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  `roles`.* FROM `roles` WHERE `roles`.`id` = 2 LIMIT 1[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 2 LIMIT 11[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (2, 1)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.7ms)[0m  [1m[31mDELETE FROM `employees_roles` WHERE `employees_roles`.`employee_id` = 1 AND `employees_roles`.`role_id` = 3[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (1, 1)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 2[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 1[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (39.7ms)[0m  [1m[31mDELETE FROM `employees_roles` WHERE `employees_roles`.`employee_id` = 1 AND `employees_roles`.`role_id` = 2[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 1[0m
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (38.9ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (2, 1)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 1[0m
+  [1m[36mPermission Load (0.2ms)[0m  [1m[34mSELECT `permissions`.* FROM `permissions` INNER JOIN `permissions_roles` ON `permissions`.`id` = `permissions_roles`.`permission_id` WHERE `permissions_roles`.`role_id` = 2[0m
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/" for 192.168.1.2 at 2017-08-06 12:05:47 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (198.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (45.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (238.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (33.7ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (2.2ms)
+  Rendered blogs/index.html.erb within layouts/blog (621.9ms)
+  Rendered shared/blog/_top.html.erb (0.9ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 3416ms (Views: 3036.1ms | ActiveRecord: 316.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/i/app-icon72x72@2x.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:06:14 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (16.6ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[35m (9.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (75.5ms)[0m  [1m[33mUPDATE `employees` SET `current_sign_in_at` = '2017-08-06 04:06:14', `last_sign_in_at` = '2017-08-05 12:53:24', `sign_in_count` = 11, `updated_at` = '2017-08-06 04:06:14' WHERE `employees`.`id` = 1[0m
+  [1m[35m (105.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (124.1ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (1.0ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (147.3ms)
+  Rendered shared/admin/_top_bar.html.erb (1.6ms)
+  Rendered shared/admin/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 1173ms (Views: 737.1ms | ActiveRecord: 323.4ms)
+
+
+Started GET "/admin/comments" for 192.168.1.2 at 2017-08-06 12:23:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mEmployee Load (28.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/comments/index.html.erb within layouts/admin
+  Rendered admin/comments/_search_form.html.erb (13.2ms)
+  [1m[36mComment Load (126.8ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/comments/_list.html.erb [2 times] (2.7ms)
+  Rendered admin/comments/index.html.erb within layouts/admin (155.6ms)
+  Rendered shared/admin/_top_bar.html.erb (1.4ms)
+  Rendered shared/admin/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 421ms (Views: 237.2ms | ActiveRecord: 158.5ms)
+
+
+Started GET "/admin/comments/1/edit" for 192.168.1.2 at 2017-08-06 12:23:26 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` WHERE `comments`.`id` = 1 LIMIT 1[0m
+  Rendering admin/comments/edit.js.erb
+  Rendered admin/comments/_edit.html.erb (31.5ms)
+  Rendered admin/comments/edit.js.erb (34.4ms)
+Completed 200 OK in 218ms (Views: 40.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:31:43 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (4.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (21.7ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (5.7ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (60.3ms)
+  Rendered shared/admin/_top_bar.html.erb (2.1ms)
+  Rendered shared/admin/_sidebar.html.erb (2.4ms)
+Completed 200 OK in 187ms (Views: 161.9ms | ActiveRecord: 4.7ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:34:54 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (98.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.6ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (237.2ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (3.4ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (245.3ms)
+  Rendered shared/admin/_top_bar.html.erb (3.3ms)
+  Rendered shared/admin/_sidebar.html.erb (1.3ms)
+Completed 200 OK in 2005ms (Views: 1837.8ms | ActiveRecord: 36.3ms)
+
+
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:36:29 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (17.1ms)
+  [1m[36mEmployee Load (3.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (436.9ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (467.8ms)
+Completed 500 Internal Server Error in 474ms (ActiveRecord: 3.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_admin_hr_employee_path' for #<#<Class:0x00000005ac33c0>:0x007f6d2d769188>
+Did you mean?  edit_admin_employee_path
+               edit_admin_employee_url):
+    15:     <%#= employee.parent&.name %>
+    16:   </td>
+    17:   <td class="center aligned">
+    18:     <%= link_to_with_permissions edit_admin_hr_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% end %>
+    21:     <%= link_to_with_permissions roles_admin_hr_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:18:in `_app_views_admin_employees__list_html_erb__1174540418104847347_70053445086740'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb___398118967169117822_70053445455360'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:39:01 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (5.9ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (211.6ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (223.8ms)
+Completed 500 Internal Server Error in 321ms (ActiveRecord: 47.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_admin_hr_employee_path' for #<#<Class:0x007f6d2d6b58e0>:0x007f6d2d6ab9f8>
+Did you mean?  edit_admin_employee_path
+               edit_admin_employee_url):
+    15:     <%#= employee.parent&.name %>
+    16:   </td>
+    17:   <td class="center aligned">
+    18:     <%= link_to_with_permissions edit_admin_hr_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% end %>
+    21:     <%= link_to_with_permissions roles_admin_hr_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:18:in `_app_views_admin_employees__list_html_erb__1174540418104847347_70053366487500'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb___398118967169117822_70053445087780'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:39:20 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (22.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (36.2ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (202.2ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (242.4ms)
+Completed 500 Internal Server Error in 299ms (ActiveRecord: 13.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_admin_hr_employee_path' for #<#<Class:0x000000054b0e60>:0x0000000549f8e0>
+Did you mean?  edit_admin_employee_path
+               edit_admin_employee_url):
+    15:     <%#= employee.parent&.name %>
+    16:   </td>
+    17:   <td class="center aligned">
+    18:     <%= link_to_with_permissions edit_admin_hr_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% end %>
+    21:     <%= link_to_with_permissions roles_admin_hr_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:18:in `_app_views_admin_employees__list_html_erb__2519385289951745034_42540260'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb__1645287763076538532_44404320'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:41:46 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (22.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (11.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (35.5ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (150.7ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (189.6ms)
+Completed 500 Internal Server Error in 239ms (ActiveRecord: 15.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `roles_admin_hr_employee_path' for #<#<Class:0x007fc8d83ddaa8>:0x007fc8d83eaaf0>
+Did you mean?  add_roles_admin_employees_path):
+    18:     <%#= link_to_with_permissions edit_admin_hr_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% #end %>
+    21:     <%= link_to_with_permissions roles_admin_hr_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+    22:       <i class="hand pointer icon"></i>
+    23:     <% end %>
+    24:     <%#= link_to_with_permissions edit_parent_admin_hr_employee_path(employee), remote: true, data: {content: '分配上级', variation: 'inverted'}, class: 'ui olive icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:21:in `_app_views_admin_employees__list_html_erb___2855588317371368040_19435560'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb__2289738789351279977_70250299061380'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 12:47:24 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (8.4ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (140.0ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (151.7ms)
+Completed 500 Internal Server Error in 163ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `role_admin_hr_employee_path' for #<#<Class:0x007fc8d83ddaa8>:0x007fc8d93fecc0>):
+    18:     <%#= link_to_with_permissions edit_admin_hr_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% #end %>
+    21:     <%= link_to_with_permissions role_admin_hr_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+    22:       <i class="hand pointer icon"></i>
+    23:     <% end %>
+    24:     <%#= link_to_with_permissions edit_parent_admin_hr_employee_path(employee), remote: true, data: {content: '分配上级', variation: 'inverted'}, class: 'ui olive icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:21:in `_app_views_admin_employees__list_html_erb___2855588317371368040_70250306055400'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb__2289738789351279977_70250307517360'
+Started GET "/" for 192.168.1.2 at 2017-08-06 12:52:07 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (45.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (15.9ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (18.6ms)
+  Rendered blogs/index.html.erb within layouts/blog (158.4ms)
+  Rendered shared/blog/_top.html.erb (0.8ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 1089ms (Views: 978.0ms | ActiveRecord: 67.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/i/favicon.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-06 12:52:10 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (16.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (129.2ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 9, `updated_at` = '2017-08-06 04:52:10' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (62.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mBlog Load (1.8ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (6.3ms)
+  Rendered blogs/show.html.erb within layouts/blog (7.5ms)
+  Rendered shared/blog/_top.html.erb (0.6ms)
+  Rendered shared/blog/_footer.html.erb (0.2ms)
+Completed 200 OK in 292ms (Views: 26.1ms | ActiveRecord: 210.0ms)
+
+
+Started GET "/blogs/assets/i/app-icon72x72@2x.png" for 192.168.1.2 at 2017-08-06 12:52:10 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/assets/i/app-icon72x72@2x.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-06 15:12:21 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (195.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (40.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (17.7ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (70.5ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 10, `updated_at` = '2017-08-06 07:12:23' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mBlog Load (4.1ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (8.6ms)
+  Rendered blogs/show.html.erb within layouts/blog (48.6ms)
+  Rendered shared/blog/_top.html.erb (1.5ms)
+  Rendered shared/blog/_footer.html.erb (0.7ms)
+Completed 200 OK in 5299ms (Views: 4692.2ms | ActiveRecord: 346.5ms)
+
+
+Started GET "/blogs/assets/i/app-icon72x72@2x.png" for 192.168.1.2 at 2017-08-06 15:12:28 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/assets/i/app-icon72x72@2x.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-06 15:12:38 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.6ms)[0m  [1m[33mUPDATE `employees` SET `current_sign_in_at` = '2017-08-06 07:12:38', `last_sign_in_at` = '2017-08-06 04:06:14', `sign_in_count` = 12, `updated_at` = '2017-08-06 07:12:38' WHERE `employees`.`id` = 1[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (254.5ms)
+  [1m[36mCategory Load (76.1ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (7.5ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (389.1ms)
+  Rendered shared/admin/_top_bar.html.erb (5.3ms)
+  Rendered shared/admin/_sidebar.html.erb (1.7ms)
+Completed 200 OK in 1269ms (Views: 842.0ms | ActiveRecord: 199.8ms)
+
+
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 15:12:42 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (78.3ms)
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (463.9ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (578.1ms)
+Completed 500 Internal Server Error in 627ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `link_to_with_permissions' for #<#<Class:0x00000001bf1cc8>:0x000000022394a0>
+Did you mean?  link_to_remove_association):
+    15:     <%#= employee.parent&.name %>
+    16:   </td>
+    17:   <td class="center aligned">
+    18:     <%= link_to_with_permissions edit_admin_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% end %>
+    21:     <%= link_to_with_permissions role_admin_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:18:in `_app_views_admin_employees__list_html_erb___3122315419602864020_32831460'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb___1716123221824017625_15206160'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 15:13:05 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (34.2ms)
+  [1m[36mEmployee Load (2.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (902.5ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (977.3ms)
+Completed 500 Internal Server Error in 997ms (ActiveRecord: 3.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `role_admin_employee_path' for #<#<Class:0x00000001bf1cc8>:0x00000003a1eed0>
+Did you mean?  edit_admin_employee_path
+               new_admin_employee_path):
+    18:     <%#= link_to_with_permissions edit_admin_employee_path(employee), remote: true, data: {content: '修改', variation: 'inverted'}, class: 'ui blue icon button' do %>
+    19:       <i class="edit icon"></i>
+    20:     <% #end %>
+    21:     <%= link_to_with_permissions role_admin_employee_path(employee), data: {content: '分配角色', variation: 'inverted'}, class: 'ui green icon button' do %>
+    22:       <i class="hand pointer icon"></i>
+    23:     <% end %>
+    24:     <%#= link_to_with_permissions edit_parent_admin_hr_employee_path(employee), remote: true, data: {content: '分配上级', variation: 'inverted'}, class: 'ui olive icon button' do %>
+  
+app/views/admin/employees/_list.html.erb:21:in `_app_views_admin_employees__list_html_erb___3122315419602864020_70217198671780'
+app/views/admin/employees/index.html.erb:20:in `_app_views_admin_employees_index_html_erb___1716123221824017625_30541580'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 15:18:19 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (24.9ms)
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (6.0ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (39.2ms)
+  Rendered shared/admin/_top_bar.html.erb (18.9ms)
+  Rendered shared/admin/_sidebar.html.erb (1.6ms)
+Completed 200 OK in 448ms (Views: 442.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 15:18:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (3.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (96.8ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (91.8ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (521.0ms)
+  Rendered admin/employees/add_roles.js.erb (526.8ms)
+Completed 200 OK in 640ms (Views: 393.5ms | ActiveRecord: 216.1ms)
+
+
+Started POST "/admin/employees/save_roles?id=1" for 192.168.1.2 at 2017-08-06 15:18:26 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#save_roles as JS
+  Parameters: {"utf8"=>"✓", "employee"=>{"role_ids"=>["1", "2"]}, "id"=>"1"}
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[36mRole Load (60.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2)[0m
+  [1m[36mRole Load (1.7ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendering admin/employees/save_roles.js.erb
+  Rendered admin/employees/save_roles.js.erb (0.9ms)
+Completed 200 OK in 106ms (Views: 21.8ms | ActiveRecord: 63.6ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 15:18:27 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (51.5ms)
+  Rendered admin/employees/add_roles.js.erb (63.8ms)
+Completed 200 OK in 120ms (Views: 81.9ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/admin/employees/save_roles?id=1" for 192.168.1.2 at 2017-08-06 15:18:29 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#save_roles as JS
+  Parameters: {"utf8"=>"✓", "employee"=>{"role_ids"=>["1", "2"]}, "id"=>"1"}
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (2.8ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2)[0m
+  [1m[36mRole Load (1.9ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendering admin/employees/save_roles.js.erb
+  Rendered admin/employees/save_roles.js.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 11.3ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 15:19:27 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (20.9ms)
+  Rendered admin/employees/add_roles.js.erb (30.1ms)
+Completed 200 OK in 84ms (Views: 55.5ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/admin/employees/save_roles?id=1" for 192.168.1.2 at 2017-08-06 15:19:29 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#save_roles as JS
+  Parameters: {"utf8"=>"✓", "employee"=>{"role_ids"=>["1", "2"]}, "id"=>"1"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2)[0m
+  [1m[36mRole Load (1.6ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendering admin/employees/save_roles.js.erb
+  Rendered admin/employees/save_roles.js.erb (0.7ms)
+Completed 200 OK in 50ms (Views: 16.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 15:19:30 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (3.1ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (21.2ms)
+  Rendered admin/employees/add_roles.js.erb (28.1ms)
+Completed 200 OK in 76ms (Views: 50.8ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/admin/employees/save_roles?id=1" for 192.168.1.2 at 2017-08-06 15:19:31 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#save_roles as JS
+  Parameters: {"utf8"=>"✓", "employee"=>{"role_ids"=>["1", "2", "3"]}, "id"=>"1"}
+  [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` IN (1, 2, 3)[0m
+  [1m[36mRole Load (4.0ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (135.0ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (3, 1)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/employees/save_roles.js.erb
+  Rendered admin/employees/save_roles.js.erb (0.6ms)
+Completed 200 OK in 298ms (Views: 7.9ms | ActiveRecord: 150.0ms)
+
+
+Started GET "/admin/employees/add_roles?id=2" for 192.168.1.2 at 2017-08-06 15:19:35 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (2.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (43.7ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 2[0m
+  Rendered admin/employees/_add_roles.html.erb (51.5ms)
+  Rendered admin/employees/add_roles.js.erb (57.9ms)
+Completed 200 OK in 100ms (Views: 35.4ms | ActiveRecord: 48.0ms)
+
+
+Started POST "/admin/employees/save_roles?id=2" for 192.168.1.2 at 2017-08-06 15:19:38 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#save_roles as JS
+  Parameters: {"utf8"=>"✓", "employee"=>{"role_ids"=>["1"]}, "id"=>"2"}
+  [1m[36mEmployee Load (3.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` WHERE `roles`.`id` = 1[0m
+  [1m[36mRole Load (4.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 2[0m
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (37.6ms)[0m  [1m[32mINSERT INTO `employees_roles` (`role_id`, `employee_id`) VALUES (1, 2)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/employees/save_roles.js.erb
+  Rendered admin/employees/save_roles.js.erb (1.2ms)
+Completed 200 OK in 127ms (Views: 29.1ms | ActiveRecord: 51.6ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 15:19:39 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (7.7ms)
+  Rendered admin/employees/add_roles.js.erb (12.4ms)
+Completed 200 OK in 52ms (Views: 34.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/employees/add_roles?id=2" for 192.168.1.2 at 2017-08-06 15:19:41 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 2[0m
+  Rendered admin/employees/_add_roles.html.erb (13.2ms)
+  Rendered admin/employees/add_roles.js.erb (28.8ms)
+Completed 200 OK in 63ms (Views: 45.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/admin/comments" for 192.168.1.2 at 2017-08-06 15:19:46 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mEmployee Load (1.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/comments/index.html.erb within layouts/admin
+  Rendered admin/comments/_search_form.html.erb (7.4ms)
+  [1m[36mComment Load (127.1ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/comments/_list.html.erb [2 times] (6.9ms)
+  Rendered admin/comments/index.html.erb within layouts/admin (175.9ms)
+  Rendered shared/admin/_top_bar.html.erb (2.2ms)
+  Rendered shared/admin/_sidebar.html.erb (1.4ms)
+Completed 200 OK in 322ms (Views: 133.9ms | ActiveRecord: 130.5ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-06 19:39:28 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (182.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (20.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (76.4ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 11, `updated_at` = '2017-08-06 11:39:29' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (71.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (4.5ms)
+  Rendered blogs/show.html.erb within layouts/blog (14.8ms)
+  Rendered shared/blog/_top.html.erb (0.9ms)
+  Rendered shared/blog/_footer.html.erb (0.5ms)
+Completed 200 OK in 2616ms (Views: 2284.1ms | ActiveRecord: 221.2ms)
+
+
+Started GET "/blogs/assets/i/app-icon72x72@2x.png" for 192.168.1.2 at 2017-08-06 19:39:32 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/blogs/assets/i/app-icon72x72@2x.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 19:39:41 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `employees` SET `current_sign_in_at` = '2017-08-06 11:39:41', `last_sign_in_at` = '2017-08-06 07:12:38', `sign_in_count` = 13, `updated_at` = '2017-08-06 11:39:41' WHERE `employees`.`id` = 1[0m
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (205.1ms)
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (2.8ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (253.6ms)
+  Rendered shared/admin/_top_bar.html.erb (1.4ms)
+  Rendered shared/admin/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 1093ms (Views: 895.4ms | ActiveRecord: 98.7ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 19:39:47 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (41.3ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (73.1ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (198.7ms)
+  Rendered admin/employees/add_roles.js.erb (222.0ms)
+Completed 200 OK in 246ms (Views: 112.8ms | ActiveRecord: 115.8ms)
+
+
+Started GET "/admin/employees/add_roles?id=2" for 192.168.1.2 at 2017-08-06 19:39:57 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 2 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 2[0m
+  Rendered admin/employees/_add_roles.html.erb (5.5ms)
+  Rendered admin/employees/add_roles.js.erb (11.3ms)
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 19:40:02 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (5.2ms)
+  Rendered admin/employees/add_roles.js.erb (11.9ms)
+Completed 200 OK in 21ms (Views: 16.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-06 20:00:53 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (2.4ms)
+  [1m[36mCategory Load (97.9ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (5.5ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (168.4ms)
+  Rendered shared/admin/_top_bar.html.erb (2.9ms)
+  Rendered shared/admin/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 497ms (Views: 292.5ms | ActiveRecord: 131.3ms)
+
+
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-06 20:09:03 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (14.2ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (55.6ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (2.7ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (88.0ms)
+  Rendered shared/admin/_top_bar.html.erb (1.8ms)
+  Rendered shared/admin/_sidebar.html.erb (310.8ms)
+Completed 500 Internal Server Error in 801ms (ActiveRecord: 14.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `admin_permissions_path' for #<#<Class:0x000000041f9678>:0x007fe9a9c26e70>
+Did you mean?  admin_employee_path):
+    11:           <i class="left bullseye icon"></i>
+    12:           <span>员工管理</span>
+    13:         <% end %>
+    14: 		<%= link_to admin_permissions_path, class: 'item', active_class: 'actives' do %>
+    15:           <i class="left bullseye icon"></i>
+    16:           <span>权限管理</span>
+    17:         <% end %>
+  
+app/views/shared/admin/_sidebar.html.erb:14:in `_app_views_shared_admin__sidebar_html_erb___893963918435322066_70320784292780'
+app/views/layouts/admin.html.erb:17:in `_app_views_layouts_admin_html_erb__2925257400401224623_70320776009600'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-06 20:10:44 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (92.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (184.0ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (0.7ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (201.0ms)
+  Rendered shared/admin/_top_bar.html.erb (1.3ms)
+  Rendered shared/admin/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 1683ms (Views: 1565.5ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:10:49 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:12:04 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (15.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:12:09 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:12:11 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:12:20 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (10.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:17:18 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:18:48 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:18:52 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:19:07 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (18.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:19:10 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:21:56 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 20:22:04 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (35.7ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (2.2ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (59.7ms)
+  Rendered shared/admin/_top_bar.html.erb (1.1ms)
+  Rendered shared/admin/_sidebar.html.erb (0.6ms)
+Completed 200 OK in 1064ms (Views: 982.7ms | ActiveRecord: 39.6ms)
+
+
+Started GET "/admin/employees/add_roles?id=1" for 192.168.1.2 at 2017-08-06 20:22:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#add_roles as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 LIMIT 1[0m
+  Rendering admin/employees/add_roles.js.erb
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT `roles`.* FROM `roles`[0m
+  [1m[35m (83.6ms)[0m  [1m[34mSELECT `roles`.id FROM `roles` INNER JOIN `employees_roles` ON `roles`.`id` = `employees_roles`.`role_id` WHERE `employees_roles`.`employee_id` = 1[0m
+  Rendered admin/employees/_add_roles.html.erb (158.5ms)
+  Rendered admin/employees/add_roles.js.erb (172.3ms)
+Completed 200 OK in 275ms (Views: 95.4ms | ActiveRecord: 85.3ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-06 20:22:53 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (17.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (35.8ms)
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (0.9ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (42.7ms)
+  Rendered shared/admin/_top_bar.html.erb (1.4ms)
+  Rendered shared/admin/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 333ms (Views: 299.6ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:22:57 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:28:43 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:28:59 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (18.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Admin::PermissionsController):
+  
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `const_get'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:271:in `block in constantize'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `each'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `inject'
+activesupport (5.1.2) lib/active_support/inflector/methods.rb:267:in `constantize'
+actionpack (5.1.2) lib/action_dispatch/http/request.rb:82:in `controller_class'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:43:in `controller'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:29:in `serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:46:in `block in serve'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.2) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.2) lib/action_dispatch/routing/route_set.rb:832:in `call'
+remotipart (1.3.1) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.7) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.7) lib/warden/manager.rb:35:in `catch'
+warden (1.2.7) lib/warden/manager.rb:35:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.2) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.2) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.2) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:32:00 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (19.7ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `permission' for #<Admin::PermissionsController:0x007f3fc01aff48>
+Did you mean?  permission_params):
+  
+app/controllers/admin/permissions_controller.rb:8:in `index'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:32:49 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 1.9ms)
+
+
+  
+NameError (undefined local variable or method `permission' for #<Admin::PermissionsController:0x000000049921c8>
+Did you mean?  permission_params):
+  
+app/controllers/admin/permissions_controller.rb:8:in `index'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:33:52 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered admin/permissions/index.html.erb within layouts/admin (0.7ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 3.8ms)
+
+
+  
+SyntaxError (/var/www/my_blog/app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+ollection: @permissions, as: : permission);@output_buffer.sa
+                              ^):
+  
+app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:35:22 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered admin/permissions/index.html.erb within layouts/admin (5.0ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.5ms)
+
+
+  
+SyntaxError (/var/www/my_blog/app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+ollection: @permissions, as: : permission);@output_buffer.sa
+                              ^):
+  
+app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:35:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered admin/permissions/index.html.erb within layouts/admin (0.6ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/var/www/my_blog/app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+ollection: @permissions, as: : permission);@output_buffer.sa
+                              ^):
+  
+app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:35:24 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered admin/permissions/index.html.erb within layouts/admin (0.5ms)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/var/www/my_blog/app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+ollection: @permissions, as: : permission);@output_buffer.sa
+                              ^):
+  
+app/views/admin/permissions/index.html.erb:17: syntax error, unexpected ':'
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:37:05 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (0.0ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (0.9ms)
+  Rendered shared/admin/_top_bar.html.erb (2.2ms)
+  Rendered shared/admin/_sidebar.html.erb (0.9ms)
+Completed 200 OK in 421ms (Views: 419.0ms | ActiveRecord: 0.3ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-06 20:43:03 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (186.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (419.3ms)
+  [1m[36mCategory Load (138.7ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (0.9ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (684.5ms)
+  Rendered shared/admin/_top_bar.html.erb (11.5ms)
+  Rendered shared/admin/_sidebar.html.erb (0.9ms)
+Completed 200 OK in 1598ms (Views: 874.0ms | ActiveRecord: 416.8ms)
+
+
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-06 20:48:49 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+  [1m[36mEmployee Load (204.1ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/index.html.erb within layouts/admin
+  Rendered admin/categories/_search_form.html.erb (52.6ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/categories/_list.html.erb [3 times] (1.2ms)
+  Rendered admin/categories/index.html.erb within layouts/admin (96.4ms)
+  Rendered shared/admin/_top_bar.html.erb (74.7ms)
+  Rendered shared/admin/_sidebar.html.erb (48.6ms)
+Completed 200 OK in 1381ms (Views: 1004.6ms | ActiveRecord: 204.5ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:48:55 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (29.5ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (66.2ms)
+  Rendered shared/admin/_top_bar.html.erb (2.0ms)
+  Rendered shared/admin/_sidebar.html.erb (1.3ms)
+Completed 200 OK in 127ms (Views: 124.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/categories/new" for 192.168.1.2 at 2017-08-06 20:48:57 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#new as JS
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/new.js.erb
+  Rendered admin/categories/_new.html.erb (177.3ms)
+  Rendered admin/categories/new.js.erb (200.9ms)
+Completed 200 OK in 306ms (Views: 275.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:49:30 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (0.0ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (4.9ms)
+  Rendered shared/admin/_top_bar.html.erb (2.4ms)
+  Rendered shared/admin/_sidebar.html.erb (1.2ms)
+Completed 200 OK in 280ms (Views: 252.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:49:32 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (0.0ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (0.9ms)
+  Rendered shared/admin/_top_bar.html.erb (8.3ms)
+  Rendered shared/admin/_sidebar.html.erb (0.8ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (104.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mPermission Load (347.7ms)[0m  [1m[34mSELECT  `permissions`.* FROM `permissions` LIMIT 11[0m
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:54:20 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (0.0ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (1.6ms)
+  Rendered shared/admin/_top_bar.html.erb (2.5ms)
+  Rendered shared/admin/_sidebar.html.erb (1.1ms)
+Completed 200 OK in 307ms (Views: 94.4ms | ActiveRecord: 43.2ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:56:28 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (0.0ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (1.8ms)
+  Rendered shared/admin/_top_bar.html.erb (1.5ms)
+  Rendered shared/admin/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 77ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/categories/new" for 192.168.1.2 at 2017-08-06 20:56:30 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#new as JS
+  [1m[36mEmployee Load (15.7ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/new.js.erb
+  Rendered admin/categories/_new.html.erb (7.4ms)
+  Rendered admin/categories/new.js.erb (26.9ms)
+Completed 200 OK in 93ms (Views: 33.6ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/admin/permissions" for 192.168.1.2 at 2017-08-06 20:57:11 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::PermissionsController#index as HTML
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/permissions/index.html.erb within layouts/admin
+  Rendered collection of admin/permissions/_list.html.erb [0 times] (0.0ms)
+  Rendered admin/permissions/index.html.erb within layouts/admin (3.4ms)
+  Rendered shared/admin/_top_bar.html.erb (4.5ms)
+  Rendered shared/admin/_sidebar.html.erb (1.0ms)
+Completed 200 OK in 64ms (Views: 61.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/categories/new" for 192.168.1.2 at 2017-08-06 20:58:11 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#new as JS
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/categories/new.js.erb
+  Rendered admin/categories/_new.html.erb (5.2ms)
+  Rendered admin/categories/new.js.erb (10.9ms)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 0.3ms)
+
+
