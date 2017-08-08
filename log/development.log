@@ -27728,3 +27728,596 @@ Completed 404 Not Found in 19ms (ActiveRecord: 2.5ms)
 ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
   
 app/controllers/blogs_controller.rb:99:in `set_blog'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&blog_id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:09:29 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (24.9ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "blog_id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 35ms (ActiveRecord: 3.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
+  
+app/controllers/blogs_controller.rb:99:in `set_blog'
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&blog_id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:10:07 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "blog_id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (9.2ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (47.6ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:10:07', '2017-08-08 09:10:07')[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (67.7ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (108.8ms)
+Completed 200 OK in 324ms (Views: 51.8ms | ActiveRecord: 153.8ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&blog_id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:10:10 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "blog_id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:10:10', '2017-08-08 09:10:10')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (9.5ms)
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&blog_id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:10:11 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "blog_id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:10:11', '2017-08-08 09:10:11')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (5.3ms)
+Completed 200 OK in 12ms (Views: 5.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&blog_id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:10:12 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "blog_id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:10:12', '2017-08-08 09:10:12')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (3.9ms)
+Completed 200 OK in 12ms (Views: 5.3ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:10:22 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
+  
+app/controllers/blogs_controller.rb:99:in `set_blog'
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:10:26 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
+  
+app/controllers/blogs_controller.rb:99:in `set_blog'
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:10:27 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
+  
+app/controllers/blogs_controller.rb:99:in `set_blog'
+Started GET "/blogs" for 192.168.1.2 at 2017-08-08 17:10:32 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (35.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (19.7ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (21.4ms)
+  Rendered blogs/index.html.erb within layouts/blog (240.2ms)
+  Rendered shared/blog/_top.html.erb (1.2ms)
+  Rendered shared/blog/_footer.html.erb (0.6ms)
+Completed 200 OK in 1061ms (Views: 1002.7ms | ActiveRecord: 55.7ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/i/favicon.png"):
+  
+actionpack (5.1.2) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.1.2) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.1.2) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.2) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.2) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.2) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:10:35 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 2ms (ActiveRecord: 0.6ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
+  
+app/controllers/blogs_controller.rb:99:in `set_blog'
+Started GET "/blogs/" for 192.168.1.2 at 2017-08-08 17:10:38 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (1.9ms)
+  Rendered blogs/index.html.erb within layouts/blog (35.4ms)
+  Rendered shared/blog/_top.html.erb (1.4ms)
+  Rendered shared/blog/_footer.html.erb (0.8ms)
+Completed 200 OK in 81ms (Views: 78.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/3" for 192.168.1.2 at 2017-08-08 17:10:42 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = NULL LIMIT 1[0m
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Blog with 'id'=):
+  
+app/controllers/blogs_controller.rb:99:in `set_blog'
+Started GET "/blogs/3" for 192.168.1.2 at 2017-08-08 17:11:22 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (2.1ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (55.1ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 4, `updated_at` = '2017-08-08 09:11:22' WHERE `blogs`.`id` = 3[0m
+  [1m[35m (25.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mComment Load (3.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 3 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (12.3ms)
+  Rendered blogs/show.html.erb within layouts/blog (221.4ms)
+  Rendered shared/blog/_top.html.erb (0.7ms)
+  Rendered shared/blog/_footer.html.erb (0.5ms)
+Completed 200 OK in 517ms (Views: 247.3ms | ActiveRecord: 134.8ms)
+
+
+Started GET "/blogs/3" for 192.168.1.2 at 2017-08-08 17:12:30 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (35.6ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 5, `updated_at` = '2017-08-08 09:12:30' WHERE `blogs`.`id` = 3[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 3 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (10.9ms)
+  Rendered blogs/show.html.erb within layouts/blog (14.8ms)
+  Rendered shared/blog/_top.html.erb (2.0ms)
+  Rendered shared/blog/_footer.html.erb (6.3ms)
+Completed 200 OK in 155ms (Views: 85.9ms | ActiveRecord: 39.2ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=3&comment_text=666%0D%0A" for 192.168.1.2 at 2017-08-08 17:12:34 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"3", "comment_text"=>"666\r\n"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (56.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666\r\n', 3, '2017-08-08 09:12:34', '2017-08-08 09:12:34')[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 3 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (2.4ms)
+Completed 200 OK in 72ms (Views: 3.0ms | ActiveRecord: 60.7ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=3&comment_text=666%0D%0A" for 192.168.1.2 at 2017-08-08 17:12:43 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"3", "comment_text"=>"666\r\n"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666\r\n', 3, '2017-08-08 09:12:43', '2017-08-08 09:12:43')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 3 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (10.6ms)
+Completed 200 OK in 19ms (Views: 10.7ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=3&comment_text=666%0D%0A" for 192.168.1.2 at 2017-08-08 17:14:00 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"3", "comment_text"=>"666\r\n"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (40.9ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666\r\n', 3, '2017-08-08 09:14:00', '2017-08-08 09:14:00')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (2.0ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 3 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (13.8ms)
+Completed 200 OK in 64ms (Views: 14.8ms | ActiveRecord: 45.1ms)
+
+
+Started GET "/" for 192.168.1.2 at 2017-08-08 17:14:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/blog
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `blogs`[0m
+  [1m[36mBlog Load (2.2ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (9.5ms)
+  Rendered blogs/index.html.erb within layouts/blog (27.7ms)
+  Rendered shared/blog/_top.html.erb (0.6ms)
+  Rendered shared/blog/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:14:25 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (40.6ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 15, `updated_at` = '2017-08-08 09:14:25' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (2.2ms)
+  Rendered blogs/show.html.erb within layouts/blog (3.9ms)
+  Rendered shared/blog/_top.html.erb (1.0ms)
+  Rendered shared/blog/_footer.html.erb (0.2ms)
+Completed 200 OK in 69ms (Views: 22.9ms | ActiveRecord: 43.0ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:14:46 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (40.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (5.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:14:46', '2017-08-08 09:14:46')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (11.3ms)
+Completed 200 OK in 83ms (Views: 21.5ms | ActiveRecord: 23.3ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:16:11 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (47.0ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:16:11', '2017-08-08 09:16:11')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (2.5ms)
+Completed 200 OK in 55ms (Views: 3.1ms | ActiveRecord: 49.0ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:16:15 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:16:15', '2017-08-08 09:16:15')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (1.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (6.9ms)
+Completed 200 OK in 15ms (Views: 7.4ms | ActiveRecord: 3.1ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /var/www/my_blog/config/initializers/new_framework_defaults.rb:23)
+DEPRECATION WARNING: [SIMPLE_FORM] SimpleForm.form_class= is deprecated and will be removed in 4.x. Use SimpleForm.default_form_class= instead (called from block in <top (required)> at /var/www/my_blog/config/initializers/simple_form_semantic.rb:64)
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=666" for 192.168.1.2 at 2017-08-08 17:16:51 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (20.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"666"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.1ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('666', 2, '2017-08-08 09:16:51', '2017-08-08 09:16:51')[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (15.0ms)
+Completed 200 OK in 102ms (Views: 17.1ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:16:58 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (1.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 16, `updated_at` = '2017-08-08 09:16:58' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (4.0ms)
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (2.4ms)
+  Rendered blogs/show.html.erb within layouts/blog (58.6ms)
+  Rendered shared/blog/_top.html.erb (0.7ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 427ms (Views: 412.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=xxx" for 192.168.1.2 at 2017-08-08 17:17:04 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"xxx"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('xxx', 2, '2017-08-08 09:17:04', '2017-08-08 09:17:04')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (2.8ms)
+Completed 200 OK in 44ms (Views: 3.1ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=xxx" for 192.168.1.2 at 2017-08-08 17:19:21 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"xxx"}
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('xxx', 2, '2017-08-08 09:19:21', '2017-08-08 09:19:21')[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (5.0ms)
+Completed 200 OK in 13ms (Views: 6.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/blogs/add_comments?utf8=%E2%9C%93&id=2&comment_text=22" for 192.168.1.2 at 2017-08-08 17:21:06 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as HTML
+  Parameters: {"utf8"=>"✓", "id"=>"2", "comment_text"=>"22"}
+  [1m[36mBlog Load (1.5ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('22', 2, '2017-08-08 09:21:06', '2017-08-08 09:21:06')[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (1.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (8.8ms)
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:21:09 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.2ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (37.0ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 17, `updated_at` = '2017-08-08 09:21:09' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (8.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (2.8ms)
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (1.7ms)
+  Rendered blogs/show.html.erb within layouts/blog (6.8ms)
+  Rendered shared/blog/_top.html.erb (0.7ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 34.8ms | ActiveRecord: 46.5ms)
+
+
+Started GET "/blogs/add_comments?id=2&comment_text=22" for 192.168.1.2 at 2017-08-08 17:27:23 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as */*
+  Parameters: {"id"=>"2", "comment_text"=>"22"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (72.3ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('22', 2, '2017-08-08 09:27:24', '2017-08-08 09:27:24')[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (4.0ms)
+Completed 200 OK in 86ms (Views: 5.9ms | ActiveRecord: 74.7ms)
+
+
+Started GET "/blogs/add_comments?id=2&comment_text=" for 192.168.1.2 at 2017-08-08 17:27:25 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as */*
+  Parameters: {"id"=>"2", "comment_text"=>""}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('', 2, '2017-08-08 09:27:25', '2017-08-08 09:27:25')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (1.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (6.9ms)
+Completed 200 OK in 14ms (Views: 7.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/blogs/2" for 192.168.1.2 at 2017-08-08 17:27:33 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `blogs` SET `view_count` = 18, `updated_at` = '2017-08-08 09:27:33' WHERE `blogs`.`id` = 2[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering blogs/show.html.erb within layouts/blog
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (2.9ms)
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` ORDER BY `blogs`.`view_count` DESC LIMIT 5[0m
+  Rendered shared/blog/_right.html.erb (1.6ms)
+  Rendered blogs/show.html.erb within layouts/blog (7.0ms)
+  Rendered shared/blog/_top.html.erb (0.8ms)
+  Rendered shared/blog/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 35.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/blogs/add_comments?id=2&comment_text=33" for 192.168.1.2 at 2017-08-08 17:27:37 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as */*
+  Parameters: {"id"=>"2", "comment_text"=>"33"}
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('33', 2, '2017-08-08 09:27:37', '2017-08-08 09:27:37')[0m
+  [1m[35m (18.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (3.6ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (8.7ms)
+Completed 200 OK in 35ms (Views: 7.2ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/blogs/add_comments?id=2&comment_text=asda" for 192.168.1.2 at 2017-08-08 17:27:39 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by BlogsController#add_comments as */*
+  Parameters: {"id"=>"2", "comment_text"=>"asda"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  `blogs`.* FROM `blogs` WHERE `blogs`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO `comments` (`content`, `blog_id`, `created_at`, `updated_at`) VALUES ('asda', 2, '2017-08-08 09:27:39', '2017-08-08 09:27:39')[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mComment Load (52.9ms)[0m  [1m[34mSELECT `comments`.* FROM `comments` WHERE `comments`.`blog_id` = 2 ORDER BY `comments`.`id` DESC[0m
+  Rendered blogs/_add_comments.html.erb (55.4ms)
+Completed 200 OK in 64ms (Views: 4.4ms | ActiveRecord: 55.6ms)
+
+
+Started GET "/admin/categories" for 192.168.1.2 at 2017-08-08 17:28:47 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CategoriesController#index as HTML
+Completed 401 Unauthorized in 53ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/login" for 192.168.1.2 at 2017-08-08 17:28:48 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#new as HTML
+  Rendering admin/sessions/new.html.erb
+  Rendered admin/sessions/new.html.erb (535.0ms)
+Completed 200 OK in 788ms (Views: 559.9ms | ActiveRecord: 204.3ms)
+
+
+Started POST "/admin/login" for 192.168.1.2 at 2017-08-08 17:28:53 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aOFDZJRIFTxkRIgBpeyoXHgoeBjrQZuPGmEGn3NA5c+ppzr8pkZZXv2p+4M8QeOtODO+CW0t4cVUJosXyrYWww==", "employee"=>{"email"=>"107422244@qq.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"登录"}
+  [1m[36mEmployee Load (14.0ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`email` = '107422244@qq.com' ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (33.3ms)[0m  [1m[33mUPDATE `employees` SET `updated_at` = '2017-08-08 09:28:54', `sign_in_count` = 15, `current_sign_in_at` = '2017-08-08 09:28:54', `last_sign_in_at` = '2017-08-06 13:05:10' WHERE `employees`.`id` = 1[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://192.168.1.4:3000/admin/employees
+Completed 302 Found in 408ms (ActiveRecord: 58.3ms)
+
+
+Started GET "/admin/employees" for 192.168.1.2 at 2017-08-08 17:28:54 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::EmployeesController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/employees/index.html.erb within layouts/admin
+  Rendered admin/employees/_search_form.html.erb (18.0ms)
+  [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/employees/_list.html.erb [3 times] (1.2ms)
+  Rendered admin/employees/index.html.erb within layouts/admin (46.3ms)
+  Rendered shared/admin/_top_bar.html.erb (1.9ms)
+  Rendered shared/admin/_sidebar.html.erb (1.3ms)
+Completed 200 OK in 154ms (Views: 111.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/comments" for 192.168.1.2 at 2017-08-08 17:28:58 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/comments/index.html.erb within layouts/admin
+  Rendered admin/comments/_search_form.html.erb (2.1ms)
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/comments/_list.html.erb [10 times] (2.3ms)
+  Rendered admin/comments/index.html.erb within layouts/admin (7.9ms)
+  Rendered shared/admin/_top_bar.html.erb (3.0ms)
+  Rendered shared/admin/_sidebar.html.erb (5.6ms)
+Completed 200 OK in 82ms (Views: 59.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/comments/1/edit" for 192.168.1.2 at 2017-08-08 17:29:49 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` WHERE `comments`.`id` = 1 LIMIT 1[0m
+  Rendering admin/comments/edit.js.erb
+  Rendered admin/comments/_edit.html.erb (18.1ms)
+  Rendered admin/comments/edit.js.erb (21.3ms)
+Completed 200 OK in 85ms (Views: 45.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin/comments/new" for 192.168.1.2 at 2017-08-08 17:29:54 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#new as JS
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/comments/new.js.erb
+  Rendered admin/comments/_new.html.erb (4.0ms)
+  Rendered admin/comments/new.js.erb (6.8ms)
+Completed 200 OK in 53ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/comments" for 192.168.1.2 at 2017-08-08 17:30:02 +0800
+Cannot render console from 192.168.1.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::CommentsController#index as HTML
+  [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  `employees`.* FROM `employees` WHERE `employees`.`id` = 1 ORDER BY `employees`.`id` ASC LIMIT 1[0m
+  Rendering admin/comments/index.html.erb within layouts/admin
+  Rendered admin/comments/_search_form.html.erb (26.4ms)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT  `comments`.* FROM `comments` LIMIT 10 OFFSET 0[0m
+  Rendered collection of admin/comments/_list.html.erb [10 times] (2.1ms)
+  Rendered admin/comments/index.html.erb within layouts/admin (31.6ms)
+  Rendered shared/admin/_top_bar.html.erb (1.2ms)
+  Rendered shared/admin/_sidebar.html.erb (0.7ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.7ms)
+
+

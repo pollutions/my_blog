@@ -44,20 +44,24 @@
             <h3 class="blog-comment">评论</h3>
           <fieldset>
             <div class="am-form-group">
-	      <input type="hidden" name="blog_id" value=<%= @blog.id %>>
+              <input type="hidden" name="blog_id" value=<%= @blog.id %>>
               <textarea class="" rows="5" placeholder="一字千金" name="comment_text" id="comment_text"></textarea>
             </div>
-            <p><button type="submit" class="am-btn am-btn-default" id="add_comments_submit">发表评论</button></p>
+            <p><button type="button" class="am-btn am-btn-default" id="add_comments_submit">发表评论</button></p>
           </fieldset>
         <% end %>
+
         <hr>
-    </div>
-<div class="am-g blog-author blog-article-margin" id="blog_comments_list">
-    <%= render 'add_comments' %>
+      
+        <div class="am-g blog-author blog-article-margin" id="blog_comments_list">
+           <%= render 'add_comments' %>
+        </div>
+
     </div>
 
+    <%= render '/shared/blog/right' %>
+    
 </div>
-
 <!-- content end -->
 
 <script type="text/javascript">
