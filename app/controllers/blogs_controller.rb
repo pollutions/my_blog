@@ -1,5 +1,5 @@
 class BlogsController < ApplicationController
-  before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog, only: [:show, :edit, :update, :destroy,:add_comments]
   layout "blog"
 
   # GET /blogs
@@ -18,7 +18,10 @@ class BlogsController < ApplicationController
     @blogs = Blog.where("title like '#{params[:title]}%' ").page(params[:page]).per(9)
     render "index"
   end
-
+  def add_comments
+	Comment.create(blog_id:@blog.id,content:params[:comment_text])
+	render:partial => 'add_comments'
+  end
   # GET /blogs/1
   # GET /blogs/1.json
   def show

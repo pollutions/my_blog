@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     collection do
       get :top_search
       post :upload_image
+      get :add_comments
     end
   end
   namespace :admin do

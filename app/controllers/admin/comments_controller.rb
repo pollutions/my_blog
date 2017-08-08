@@ -13,8 +13,8 @@ class Admin::CommentsController < Admin::BaseController
   def show
   end
  def show_name
-    @comment = Comment.find(params[:id])
-    render json: {name: @comment.name}
+    @blog = Blog.find(params[:id])
+    render json: {name: @blog.title}
   end
   # GET /comments/new
   def new
